@@ -1,0 +1,1962 @@
+[
+  {
+    "station_id": "lagos_001",
+    "state": "Lagos",
+    "latitude": 6.588801,
+    "longitude": 3.306993,
+    "pump_count": 6,
+    "fraud_risk": 0.36,
+    "tank_capacity": {
+      "PMS": 49372,
+      "AGO": 24031,
+      "LPG": 10642,
+      "ATK": 13622
+    }
+  },
+  {
+    "station_id": "lagos_002",
+    "state": "Lagos",
+    "latitude": 6.631178,
+    "longitude": 3.339279,
+    "pump_count": 5,
+    "fraud_risk": 0.09,
+    "tank_capacity": {
+      "PMS": 36859,
+      "AGO": 10866,
+      "LPG": 12503,
+      "ATK": 11362
+    }
+  },
+  {
+    "station_id": "lagos_003",
+    "state": "Lagos",
+    "latitude": 6.416668,
+    "longitude": 3.439014,
+    "pump_count": 5,
+    "fraud_risk": 0.29,
+    "tank_capacity": {
+      "PMS": 31529,
+      "AGO": 20709,
+      "LPG": 10302,
+      "ATK": 16965
+    }
+  },
+  {
+    "station_id": "lagos_004",
+    "state": "Lagos",
+    "latitude": 6.576953,
+    "longitude": 3.398782,
+    "pump_count": 6,
+    "fraud_risk": 0.39,
+    "tank_capacity": {
+      "PMS": 45463,
+      "AGO": 24923,
+      "LPG": 10831,
+      "ATK": 9541
+    }
+  },
+  {
+    "station_id": "lagos_005",
+    "state": "Lagos",
+    "latitude": 6.42354,
+    "longitude": 3.27239,
+    "pump_count": 8,
+    "fraud_risk": 0.32,
+    "tank_capacity": {
+      "PMS": 33300,
+      "AGO": 24332,
+      "LPG": 6816,
+      "ATK": 10731
+    }
+  },
+  {
+    "station_id": "lagos_006",
+    "state": "Lagos",
+    "latitude": 6.445691,
+    "longitude": 3.486149,
+    "pump_count": 8,
+    "fraud_risk": 0.35,
+    "tank_capacity": {
+      "PMS": 41455,
+      "AGO": 21839,
+      "LPG": 14596,
+      "ATK": 12524
+    }
+  },
+  {
+    "station_id": "lagos_007",
+    "state": "Lagos",
+    "latitude": 6.418551,
+    "longitude": 3.407029,
+    "pump_count": 6,
+    "fraud_risk": 0.36,
+    "tank_capacity": {
+      "PMS": 45383,
+      "AGO": 12599,
+      "LPG": 11039,
+      "ATK": 14971
+    }
+  },
+  {
+    "station_id": "lagos_008",
+    "state": "Lagos",
+    "latitude": 6.576287,
+    "longitude": 3.49057,
+    "pump_count": 7,
+    "fraud_risk": 0.2,
+    "tank_capacity": {
+      "PMS": 35237,
+      "AGO": 14530,
+      "LPG": 7233,
+      "ATK": 17361
+    }
+  },
+  {
+    "station_id": "lagos_009",
+    "state": "Lagos",
+    "latitude": 6.526093,
+    "longitude": 3.269251,
+    "pump_count": 6,
+    "fraud_risk": 0.38,
+    "tank_capacity": {
+      "PMS": 49601,
+      "AGO": 18299,
+      "LPG": 14068,
+      "ATK": 14470
+    }
+  },
+  {
+    "station_id": "lagos_010",
+    "state": "Lagos",
+    "latitude": 6.620691,
+    "longitude": 3.303079,
+    "pump_count": 7,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 31749,
+      "AGO": 14381,
+      "LPG": 13083,
+      "ATK": 13838
+    }
+  },
+  {
+    "station_id": "lagos_011",
+    "state": "Lagos",
+    "latitude": 6.610749,
+    "longitude": 3.435282,
+    "pump_count": 7,
+    "fraud_risk": 0.31,
+    "tank_capacity": {
+      "PMS": 42695,
+      "AGO": 18347,
+      "LPG": 13529,
+      "ATK": 17329
+    }
+  },
+  {
+    "station_id": "lagos_012",
+    "state": "Lagos",
+    "latitude": 6.630802,
+    "longitude": 3.392745,
+    "pump_count": 5,
+    "fraud_risk": 0.2,
+    "tank_capacity": {
+      "PMS": 42840,
+      "AGO": 11908,
+      "LPG": 12695,
+      "ATK": 15057
+    }
+  },
+  {
+    "station_id": "lagos_013",
+    "state": "Lagos",
+    "latitude": 6.534527,
+    "longitude": 3.490736,
+    "pump_count": 7,
+    "fraud_risk": 0.37,
+    "tank_capacity": {
+      "PMS": 36051,
+      "AGO": 12547,
+      "LPG": 10380,
+      "ATK": 18734
+    }
+  },
+  {
+    "station_id": "lagos_014",
+    "state": "Lagos",
+    "latitude": 6.498133,
+    "longitude": 3.36378,
+    "pump_count": 8,
+    "fraud_risk": 0.06,
+    "tank_capacity": {
+      "PMS": 35703,
+      "AGO": 11551,
+      "LPG": 14484,
+      "ATK": 17010
+    }
+  },
+  {
+    "station_id": "lagos_015",
+    "state": "Lagos",
+    "latitude": 6.465727,
+    "longitude": 3.279287,
+    "pump_count": 6,
+    "fraud_risk": 0.34,
+    "tank_capacity": {
+      "PMS": 43905,
+      "AGO": 16390,
+      "LPG": 9167,
+      "ATK": 15177
+    }
+  },
+  {
+    "station_id": "lagos_016",
+    "state": "Lagos",
+    "latitude": 6.417915,
+    "longitude": 3.419152,
+    "pump_count": 8,
+    "fraud_risk": 0.2,
+    "tank_capacity": {
+      "PMS": 44469,
+      "AGO": 18157,
+      "LPG": 14403,
+      "ATK": 17193
+    }
+  },
+  {
+    "station_id": "lagos_017",
+    "state": "Lagos",
+    "latitude": 6.460591,
+    "longitude": 3.394515,
+    "pump_count": 8,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 47177,
+      "AGO": 13496,
+      "LPG": 10465,
+      "ATK": 9188
+    }
+  },
+  {
+    "station_id": "lagos_018",
+    "state": "Lagos",
+    "latitude": 6.607808,
+    "longitude": 3.39509,
+    "pump_count": 5,
+    "fraud_risk": 0.32,
+    "tank_capacity": {
+      "PMS": 43807,
+      "AGO": 12658,
+      "LPG": 8824,
+      "ATK": 13278
+    }
+  },
+  {
+    "station_id": "fct_001",
+    "state": "FCT",
+    "latitude": 9.172807,
+    "longitude": 7.312483,
+    "pump_count": 5,
+    "fraud_risk": 0.3,
+    "tank_capacity": {
+      "PMS": 42789,
+      "AGO": 12515,
+      "LPG": 5257,
+      "ATK": 9241
+    }
+  },
+  {
+    "station_id": "fct_002",
+    "state": "FCT",
+    "latitude": 9.106933,
+    "longitude": 7.502357,
+    "pump_count": 8,
+    "fraud_risk": 0.14,
+    "tank_capacity": {
+      "PMS": 38023,
+      "AGO": 18157,
+      "LPG": 6184,
+      "ATK": 10122
+    }
+  },
+  {
+    "station_id": "fct_003",
+    "state": "FCT",
+    "latitude": 9.081672,
+    "longitude": 7.405265,
+    "pump_count": 6,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 36375,
+      "AGO": 10409,
+      "LPG": 13501,
+      "ATK": 17301
+    }
+  },
+  {
+    "station_id": "fct_004",
+    "state": "FCT",
+    "latitude": 9.173661,
+    "longitude": 7.291912,
+    "pump_count": 5,
+    "fraud_risk": 0.17,
+    "tank_capacity": {
+      "PMS": 32243,
+      "AGO": 23024,
+      "LPG": 14475,
+      "ATK": 13473
+    }
+  },
+  {
+    "station_id": "fct_005",
+    "state": "FCT",
+    "latitude": 8.980827,
+    "longitude": 7.304916,
+    "pump_count": 8,
+    "fraud_risk": 0.37,
+    "tank_capacity": {
+      "PMS": 49213,
+      "AGO": 13855,
+      "LPG": 7247,
+      "ATK": 15640
+    }
+  },
+  {
+    "station_id": "fct_006",
+    "state": "FCT",
+    "latitude": 9.126619,
+    "longitude": 7.456415,
+    "pump_count": 6,
+    "fraud_risk": 0.12,
+    "tank_capacity": {
+      "PMS": 40002,
+      "AGO": 24140,
+      "LPG": 7137,
+      "ATK": 10809
+    }
+  },
+  {
+    "station_id": "fct_007",
+    "state": "FCT",
+    "latitude": 9.190957,
+    "longitude": 7.326867,
+    "pump_count": 7,
+    "fraud_risk": 0.12,
+    "tank_capacity": {
+      "PMS": 32478,
+      "AGO": 12490,
+      "LPG": 5200,
+      "ATK": 14461
+    }
+  },
+  {
+    "station_id": "fct_008",
+    "state": "FCT",
+    "latitude": 9.001347,
+    "longitude": 7.426058,
+    "pump_count": 5,
+    "fraud_risk": 0.22,
+    "tank_capacity": {
+      "PMS": 47313,
+      "AGO": 23784,
+      "LPG": 9006,
+      "ATK": 15164
+    }
+  },
+  {
+    "station_id": "fct_009",
+    "state": "FCT",
+    "latitude": 9.186485,
+    "longitude": 7.499407,
+    "pump_count": 5,
+    "fraud_risk": 0.32,
+    "tank_capacity": {
+      "PMS": 43281,
+      "AGO": 15471,
+      "LPG": 14084,
+      "ATK": 11646
+    }
+  },
+  {
+    "station_id": "fct_010",
+    "state": "FCT",
+    "latitude": 8.982622,
+    "longitude": 7.410647,
+    "pump_count": 8,
+    "fraud_risk": 0.34,
+    "tank_capacity": {
+      "PMS": 42622,
+      "AGO": 15936,
+      "LPG": 6452,
+      "ATK": 17178
+    }
+  },
+  {
+    "station_id": "fct_011",
+    "state": "FCT",
+    "latitude": 9.040176,
+    "longitude": 7.344118,
+    "pump_count": 6,
+    "fraud_risk": 0.1,
+    "tank_capacity": {
+      "PMS": 32424,
+      "AGO": 11333,
+      "LPG": 7816,
+      "ATK": 11416
+    }
+  },
+  {
+    "station_id": "fct_012",
+    "state": "FCT",
+    "latitude": 9.144475,
+    "longitude": 7.388264,
+    "pump_count": 5,
+    "fraud_risk": 0.06,
+    "tank_capacity": {
+      "PMS": 47374,
+      "AGO": 19332,
+      "LPG": 13337,
+      "ATK": 8878
+    }
+  },
+  {
+    "station_id": "rivers_001",
+    "state": "Rivers",
+    "latitude": 4.712779,
+    "longitude": 7.048295,
+    "pump_count": 6,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 47464,
+      "AGO": 11228,
+      "LPG": 12368,
+      "ATK": 15131
+    }
+  },
+  {
+    "station_id": "rivers_002",
+    "state": "Rivers",
+    "latitude": 4.880656,
+    "longitude": 7.112168,
+    "pump_count": 8,
+    "fraud_risk": 0.13,
+    "tank_capacity": {
+      "PMS": 37277,
+      "AGO": 19328,
+      "LPG": 5665,
+      "ATK": 10328
+    }
+  },
+  {
+    "station_id": "rivers_003",
+    "state": "Rivers",
+    "latitude": 4.790809,
+    "longitude": 6.939966,
+    "pump_count": 5,
+    "fraud_risk": 0.13,
+    "tank_capacity": {
+      "PMS": 32683,
+      "AGO": 14276,
+      "LPG": 14519,
+      "ATK": 15053
+    }
+  },
+  {
+    "station_id": "rivers_004",
+    "state": "Rivers",
+    "latitude": 4.781148,
+    "longitude": 7.147105,
+    "pump_count": 6,
+    "fraud_risk": 0.4,
+    "tank_capacity": {
+      "PMS": 37002,
+      "AGO": 24181,
+      "LPG": 5330,
+      "ATK": 8663
+    }
+  },
+  {
+    "station_id": "rivers_005",
+    "state": "Rivers",
+    "latitude": 4.760442,
+    "longitude": 7.053377,
+    "pump_count": 6,
+    "fraud_risk": 0.4,
+    "tank_capacity": {
+      "PMS": 45187,
+      "AGO": 14955,
+      "LPG": 13077,
+      "ATK": 13192
+    }
+  },
+  {
+    "station_id": "rivers_006",
+    "state": "Rivers",
+    "latitude": 4.903359,
+    "longitude": 7.024005,
+    "pump_count": 7,
+    "fraud_risk": 0.37,
+    "tank_capacity": {
+      "PMS": 39096,
+      "AGO": 10237,
+      "LPG": 14714,
+      "ATK": 12386
+    }
+  },
+  {
+    "station_id": "rivers_007",
+    "state": "Rivers",
+    "latitude": 4.864138,
+    "longitude": 7.065986,
+    "pump_count": 5,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 39896,
+      "AGO": 13022,
+      "LPG": 11552,
+      "ATK": 16604
+    }
+  },
+  {
+    "station_id": "rivers_008",
+    "state": "Rivers",
+    "latitude": 4.757713,
+    "longitude": 6.987559,
+    "pump_count": 6,
+    "fraud_risk": 0.06,
+    "tank_capacity": {
+      "PMS": 36279,
+      "AGO": 17742,
+      "LPG": 14302,
+      "ATK": 9050
+    }
+  },
+  {
+    "station_id": "rivers_009",
+    "state": "Rivers",
+    "latitude": 4.799584,
+    "longitude": 7.02367,
+    "pump_count": 6,
+    "fraud_risk": 0.09,
+    "tank_capacity": {
+      "PMS": 44272,
+      "AGO": 24964,
+      "LPG": 5938,
+      "ATK": 15121
+    }
+  },
+  {
+    "station_id": "rivers_010",
+    "state": "Rivers",
+    "latitude": 4.764142,
+    "longitude": 7.031648,
+    "pump_count": 8,
+    "fraud_risk": 0.35,
+    "tank_capacity": {
+      "PMS": 32314,
+      "AGO": 10258,
+      "LPG": 5541,
+      "ATK": 17582
+    }
+  },
+  {
+    "station_id": "kano_001",
+    "state": "Kano",
+    "latitude": 12.031801,
+    "longitude": 8.706554,
+    "pump_count": 7,
+    "fraud_risk": 0.35,
+    "tank_capacity": {
+      "PMS": 34078,
+      "AGO": 20421,
+      "LPG": 12669,
+      "ATK": 19630
+    }
+  },
+  {
+    "station_id": "kano_002",
+    "state": "Kano",
+    "latitude": 12.038066,
+    "longitude": 8.611764,
+    "pump_count": 8,
+    "fraud_risk": 0.4,
+    "tank_capacity": {
+      "PMS": 47786,
+      "AGO": 23578,
+      "LPG": 11848,
+      "ATK": 9527
+    }
+  },
+  {
+    "station_id": "kano_003",
+    "state": "Kano",
+    "latitude": 11.983293,
+    "longitude": 8.498271,
+    "pump_count": 5,
+    "fraud_risk": 0.11,
+    "tank_capacity": {
+      "PMS": 35689,
+      "AGO": 15702,
+      "LPG": 11503,
+      "ATK": 14543
+    }
+  },
+  {
+    "station_id": "kano_004",
+    "state": "Kano",
+    "latitude": 11.978061,
+    "longitude": 8.490487,
+    "pump_count": 8,
+    "fraud_risk": 0.36,
+    "tank_capacity": {
+      "PMS": 45866,
+      "AGO": 21265,
+      "LPG": 9253,
+      "ATK": 11083
+    }
+  },
+  {
+    "station_id": "kano_005",
+    "state": "Kano",
+    "latitude": 12.056658,
+    "longitude": 8.510514,
+    "pump_count": 7,
+    "fraud_risk": 0.06,
+    "tank_capacity": {
+      "PMS": 43226,
+      "AGO": 15129,
+      "LPG": 7404,
+      "ATK": 16547
+    }
+  },
+  {
+    "station_id": "kano_006",
+    "state": "Kano",
+    "latitude": 12.016837,
+    "longitude": 8.491539,
+    "pump_count": 5,
+    "fraud_risk": 0.24,
+    "tank_capacity": {
+      "PMS": 35259,
+      "AGO": 20265,
+      "LPG": 10647,
+      "ATK": 19706
+    }
+  },
+  {
+    "station_id": "kano_007",
+    "state": "Kano",
+    "latitude": 11.922951,
+    "longitude": 8.659518,
+    "pump_count": 5,
+    "fraud_risk": 0.37,
+    "tank_capacity": {
+      "PMS": 31980,
+      "AGO": 10562,
+      "LPG": 11396,
+      "ATK": 11930
+    }
+  },
+  {
+    "station_id": "kano_008",
+    "state": "Kano",
+    "latitude": 12.009289,
+    "longitude": 8.701638,
+    "pump_count": 6,
+    "fraud_risk": 0.4,
+    "tank_capacity": {
+      "PMS": 49110,
+      "AGO": 10715,
+      "LPG": 13678,
+      "ATK": 10874
+    }
+  },
+  {
+    "station_id": "kano_009",
+    "state": "Kano",
+    "latitude": 12.062607,
+    "longitude": 8.480456,
+    "pump_count": 8,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 36506,
+      "AGO": 11597,
+      "LPG": 11803,
+      "ATK": 10882
+    }
+  },
+  {
+    "station_id": "oyo_001",
+    "state": "Oyo",
+    "latitude": 7.265242,
+    "longitude": 3.895556,
+    "pump_count": 8,
+    "fraud_risk": 0.25,
+    "tank_capacity": {
+      "PMS": 45651,
+      "AGO": 19017,
+      "LPG": 13152,
+      "ATK": 16411
+    }
+  },
+  {
+    "station_id": "oyo_002",
+    "state": "Oyo",
+    "latitude": 7.488462,
+    "longitude": 4.016995,
+    "pump_count": 8,
+    "fraud_risk": 0.15,
+    "tank_capacity": {
+      "PMS": 35671,
+      "AGO": 24294,
+      "LPG": 9850,
+      "ATK": 8987
+    }
+  },
+  {
+    "station_id": "oyo_003",
+    "state": "Oyo",
+    "latitude": 7.31475,
+    "longitude": 4.033767,
+    "pump_count": 5,
+    "fraud_risk": 0.21,
+    "tank_capacity": {
+      "PMS": 46777,
+      "AGO": 12395,
+      "LPG": 10076,
+      "ATK": 17324
+    }
+  },
+  {
+    "station_id": "oyo_004",
+    "state": "Oyo",
+    "latitude": 7.350741,
+    "longitude": 3.952435,
+    "pump_count": 6,
+    "fraud_risk": 0.24,
+    "tank_capacity": {
+      "PMS": 49066,
+      "AGO": 17039,
+      "LPG": 6218,
+      "ATK": 17777
+    }
+  },
+  {
+    "station_id": "oyo_005",
+    "state": "Oyo",
+    "latitude": 7.339131,
+    "longitude": 3.873822,
+    "pump_count": 6,
+    "fraud_risk": 0.34,
+    "tank_capacity": {
+      "PMS": 41480,
+      "AGO": 15893,
+      "LPG": 8828,
+      "ATK": 18139
+    }
+  },
+  {
+    "station_id": "oyo_006",
+    "state": "Oyo",
+    "latitude": 7.416142,
+    "longitude": 3.862896,
+    "pump_count": 8,
+    "fraud_risk": 0.29,
+    "tank_capacity": {
+      "PMS": 41244,
+      "AGO": 17067,
+      "LPG": 14108,
+      "ATK": 8949
+    }
+  },
+  {
+    "station_id": "oyo_007",
+    "state": "Oyo",
+    "latitude": 7.383709,
+    "longitude": 4.009223,
+    "pump_count": 7,
+    "fraud_risk": 0.34,
+    "tank_capacity": {
+      "PMS": 38159,
+      "AGO": 13955,
+      "LPG": 5037,
+      "ATK": 19916
+    }
+  },
+  {
+    "station_id": "oyo_008",
+    "state": "Oyo",
+    "latitude": 7.443619,
+    "longitude": 3.956623,
+    "pump_count": 7,
+    "fraud_risk": 0.08,
+    "tank_capacity": {
+      "PMS": 43024,
+      "AGO": 12225,
+      "LPG": 10412,
+      "ATK": 19202
+    }
+  },
+  {
+    "station_id": "ogun_001",
+    "state": "Ogun",
+    "latitude": 7.083856,
+    "longitude": 3.452881,
+    "pump_count": 7,
+    "fraud_risk": 0.1,
+    "tank_capacity": {
+      "PMS": 34150,
+      "AGO": 16639,
+      "LPG": 10022,
+      "ATK": 15480
+    }
+  },
+  {
+    "station_id": "ogun_002",
+    "state": "Ogun",
+    "latitude": 7.140774,
+    "longitude": 3.289094,
+    "pump_count": 5,
+    "fraud_risk": 0.17,
+    "tank_capacity": {
+      "PMS": 35493,
+      "AGO": 24551,
+      "LPG": 8933,
+      "ATK": 17293
+    }
+  },
+  {
+    "station_id": "ogun_003",
+    "state": "Ogun",
+    "latitude": 7.075135,
+    "longitude": 3.436841,
+    "pump_count": 6,
+    "fraud_risk": 0.14,
+    "tank_capacity": {
+      "PMS": 32757,
+      "AGO": 17333,
+      "LPG": 8926,
+      "ATK": 16504
+    }
+  },
+  {
+    "station_id": "ogun_004",
+    "state": "Ogun",
+    "latitude": 7.074504,
+    "longitude": 3.32863,
+    "pump_count": 5,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 34131,
+      "AGO": 13657,
+      "LPG": 8124,
+      "ATK": 16759
+    }
+  },
+  {
+    "station_id": "ogun_005",
+    "state": "Ogun",
+    "latitude": 7.09425,
+    "longitude": 3.447559,
+    "pump_count": 7,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 44597,
+      "AGO": 12710,
+      "LPG": 14786,
+      "ATK": 16832
+    }
+  },
+  {
+    "station_id": "ogun_006",
+    "state": "Ogun",
+    "latitude": 7.198184,
+    "longitude": 3.278808,
+    "pump_count": 8,
+    "fraud_risk": 0.26,
+    "tank_capacity": {
+      "PMS": 44347,
+      "AGO": 20872,
+      "LPG": 9715,
+      "ATK": 16484
+    }
+  },
+  {
+    "station_id": "ogun_007",
+    "state": "Ogun",
+    "latitude": 7.239991,
+    "longitude": 3.467139,
+    "pump_count": 7,
+    "fraud_risk": 0.17,
+    "tank_capacity": {
+      "PMS": 44464,
+      "AGO": 12514,
+      "LPG": 5514,
+      "ATK": 15814
+    }
+  },
+  {
+    "station_id": "ogun_008",
+    "state": "Ogun",
+    "latitude": 7.244425,
+    "longitude": 3.312417,
+    "pump_count": 6,
+    "fraud_risk": 0.16,
+    "tank_capacity": {
+      "PMS": 40603,
+      "AGO": 14002,
+      "LPG": 8752,
+      "ATK": 11803
+    }
+  },
+  {
+    "station_id": "delta_001",
+    "state": "Delta",
+    "latitude": 5.662489,
+    "longitude": 6.009553,
+    "pump_count": 7,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 44039,
+      "AGO": 12060,
+      "LPG": 6459,
+      "ATK": 10770
+    }
+  },
+  {
+    "station_id": "delta_002",
+    "state": "Delta",
+    "latitude": 5.778226,
+    "longitude": 6.011132,
+    "pump_count": 7,
+    "fraud_risk": 0.3,
+    "tank_capacity": {
+      "PMS": 43426,
+      "AGO": 14565,
+      "LPG": 9574,
+      "ATK": 16542
+    }
+  },
+  {
+    "station_id": "delta_003",
+    "state": "Delta",
+    "latitude": 5.792611,
+    "longitude": 5.904958,
+    "pump_count": 8,
+    "fraud_risk": 0.13,
+    "tank_capacity": {
+      "PMS": 48838,
+      "AGO": 21381,
+      "LPG": 10733,
+      "ATK": 12924
+    }
+  },
+  {
+    "station_id": "delta_004",
+    "state": "Delta",
+    "latitude": 5.730593,
+    "longitude": 6.037772,
+    "pump_count": 6,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 33180,
+      "AGO": 10789,
+      "LPG": 13982,
+      "ATK": 9567
+    }
+  },
+  {
+    "station_id": "delta_005",
+    "state": "Delta",
+    "latitude": 5.671933,
+    "longitude": 5.981084,
+    "pump_count": 5,
+    "fraud_risk": 0.27,
+    "tank_capacity": {
+      "PMS": 38050,
+      "AGO": 17079,
+      "LPG": 12416,
+      "ATK": 17700
+    }
+  },
+  {
+    "station_id": "delta_006",
+    "state": "Delta",
+    "latitude": 5.765343,
+    "longitude": 5.929384,
+    "pump_count": 6,
+    "fraud_risk": 0.2,
+    "tank_capacity": {
+      "PMS": 33819,
+      "AGO": 19049,
+      "LPG": 14594,
+      "ATK": 8024
+    }
+  },
+  {
+    "station_id": "delta_007",
+    "state": "Delta",
+    "latitude": 5.618115,
+    "longitude": 5.920128,
+    "pump_count": 6,
+    "fraud_risk": 0.12,
+    "tank_capacity": {
+      "PMS": 46972,
+      "AGO": 24088,
+      "LPG": 8417,
+      "ATK": 8194
+    }
+  },
+  {
+    "station_id": "anambra_001",
+    "state": "Anambra",
+    "latitude": 6.202457,
+    "longitude": 6.93723,
+    "pump_count": 5,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 41336,
+      "AGO": 10253,
+      "LPG": 10338,
+      "ATK": 11696
+    }
+  },
+  {
+    "station_id": "anambra_002",
+    "state": "Anambra",
+    "latitude": 6.303557,
+    "longitude": 6.993655,
+    "pump_count": 6,
+    "fraud_risk": 0.12,
+    "tank_capacity": {
+      "PMS": 46914,
+      "AGO": 24205,
+      "LPG": 14104,
+      "ATK": 16582
+    }
+  },
+  {
+    "station_id": "anambra_003",
+    "state": "Anambra",
+    "latitude": 6.289921,
+    "longitude": 6.879967,
+    "pump_count": 7,
+    "fraud_risk": 0.2,
+    "tank_capacity": {
+      "PMS": 32304,
+      "AGO": 14901,
+      "LPG": 9887,
+      "ATK": 18744
+    }
+  },
+  {
+    "station_id": "anambra_004",
+    "state": "Anambra",
+    "latitude": 6.223973,
+    "longitude": 6.931239,
+    "pump_count": 5,
+    "fraud_risk": 0.15,
+    "tank_capacity": {
+      "PMS": 34120,
+      "AGO": 12882,
+      "LPG": 10090,
+      "ATK": 16255
+    }
+  },
+  {
+    "station_id": "anambra_005",
+    "state": "Anambra",
+    "latitude": 6.338497,
+    "longitude": 6.89424,
+    "pump_count": 5,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 46409,
+      "AGO": 12106,
+      "LPG": 9013,
+      "ATK": 13689
+    }
+  },
+  {
+    "station_id": "anambra_006",
+    "state": "Anambra",
+    "latitude": 6.201178,
+    "longitude": 6.977953,
+    "pump_count": 5,
+    "fraud_risk": 0.11,
+    "tank_capacity": {
+      "PMS": 41381,
+      "AGO": 10740,
+      "LPG": 8775,
+      "ATK": 8350
+    }
+  },
+  {
+    "station_id": "anambra_007",
+    "state": "Anambra",
+    "latitude": 6.22917,
+    "longitude": 7.004719,
+    "pump_count": 5,
+    "fraud_risk": 0.39,
+    "tank_capacity": {
+      "PMS": 34136,
+      "AGO": 12162,
+      "LPG": 7009,
+      "ATK": 10275
+    }
+  },
+  {
+    "station_id": "imo_001",
+    "state": "Imo",
+    "latitude": 5.497243,
+    "longitude": 7.050807,
+    "pump_count": 5,
+    "fraud_risk": 0.12,
+    "tank_capacity": {
+      "PMS": 45727,
+      "AGO": 11148,
+      "LPG": 10967,
+      "ATK": 8149
+    }
+  },
+  {
+    "station_id": "imo_002",
+    "state": "Imo",
+    "latitude": 5.40214,
+    "longitude": 6.981906,
+    "pump_count": 6,
+    "fraud_risk": 0.21,
+    "tank_capacity": {
+      "PMS": 32587,
+      "AGO": 11383,
+      "LPG": 8901,
+      "ATK": 14411
+    }
+  },
+  {
+    "station_id": "imo_003",
+    "state": "Imo",
+    "latitude": 5.392326,
+    "longitude": 7.128273,
+    "pump_count": 7,
+    "fraud_risk": 0.21,
+    "tank_capacity": {
+      "PMS": 33882,
+      "AGO": 20189,
+      "LPG": 5336,
+      "ATK": 12760
+    }
+  },
+  {
+    "station_id": "imo_004",
+    "state": "Imo",
+    "latitude": 5.554838,
+    "longitude": 6.963777,
+    "pump_count": 8,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 31412,
+      "AGO": 12833,
+      "LPG": 14025,
+      "ATK": 12472
+    }
+  },
+  {
+    "station_id": "imo_005",
+    "state": "Imo",
+    "latitude": 5.461387,
+    "longitude": 7.143349,
+    "pump_count": 5,
+    "fraud_risk": 0.39,
+    "tank_capacity": {
+      "PMS": 38112,
+      "AGO": 22566,
+      "LPG": 10993,
+      "ATK": 14269
+    }
+  },
+  {
+    "station_id": "imo_006",
+    "state": "Imo",
+    "latitude": 5.398499,
+    "longitude": 7.107613,
+    "pump_count": 8,
+    "fraud_risk": 0.26,
+    "tank_capacity": {
+      "PMS": 45878,
+      "AGO": 13076,
+      "LPG": 7350,
+      "ATK": 18174
+    }
+  },
+  {
+    "station_id": "imo_007",
+    "state": "Imo",
+    "latitude": 5.499099,
+    "longitude": 7.096751,
+    "pump_count": 7,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 48378,
+      "AGO": 20186,
+      "LPG": 6043,
+      "ATK": 18813
+    }
+  },
+  {
+    "station_id": "kaduna_001",
+    "state": "Kaduna",
+    "latitude": 10.479289,
+    "longitude": 7.33928,
+    "pump_count": 8,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 47705,
+      "AGO": 18417,
+      "LPG": 9741,
+      "ATK": 10064
+    }
+  },
+  {
+    "station_id": "kaduna_002",
+    "state": "Kaduna",
+    "latitude": 10.437481,
+    "longitude": 7.436553,
+    "pump_count": 7,
+    "fraud_risk": 0.07,
+    "tank_capacity": {
+      "PMS": 32695,
+      "AGO": 20034,
+      "LPG": 10344,
+      "ATK": 14802
+    }
+  },
+  {
+    "station_id": "kaduna_003",
+    "state": "Kaduna",
+    "latitude": 10.406506,
+    "longitude": 7.474158,
+    "pump_count": 5,
+    "fraud_risk": 0.34,
+    "tank_capacity": {
+      "PMS": 43511,
+      "AGO": 12780,
+      "LPG": 7384,
+      "ATK": 8202
+    }
+  },
+  {
+    "station_id": "kaduna_004",
+    "state": "Kaduna",
+    "latitude": 10.513313,
+    "longitude": 7.420767,
+    "pump_count": 5,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 38571,
+      "AGO": 22767,
+      "LPG": 14548,
+      "ATK": 19703
+    }
+  },
+  {
+    "station_id": "kaduna_005",
+    "state": "Kaduna",
+    "latitude": 10.548247,
+    "longitude": 7.317953,
+    "pump_count": 5,
+    "fraud_risk": 0.08,
+    "tank_capacity": {
+      "PMS": 47908,
+      "AGO": 16531,
+      "LPG": 12392,
+      "ATK": 10609
+    }
+  },
+  {
+    "station_id": "kaduna_006",
+    "state": "Kaduna",
+    "latitude": 10.585414,
+    "longitude": 7.30868,
+    "pump_count": 8,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 38529,
+      "AGO": 22706,
+      "LPG": 14026,
+      "ATK": 15178
+    }
+  },
+  {
+    "station_id": "kaduna_007",
+    "state": "Kaduna",
+    "latitude": 10.465855,
+    "longitude": 7.47275,
+    "pump_count": 8,
+    "fraud_risk": 0.29,
+    "tank_capacity": {
+      "PMS": 43074,
+      "AGO": 18549,
+      "LPG": 11485,
+      "ATK": 19503
+    }
+  },
+  {
+    "station_id": "enugu_001",
+    "state": "Enugu",
+    "latitude": 6.428845,
+    "longitude": 7.410848,
+    "pump_count": 7,
+    "fraud_risk": 0.21,
+    "tank_capacity": {
+      "PMS": 37094,
+      "AGO": 16311,
+      "LPG": 11669,
+      "ATK": 16793
+    }
+  },
+  {
+    "station_id": "enugu_002",
+    "state": "Enugu",
+    "latitude": 6.36424,
+    "longitude": 7.475623,
+    "pump_count": 5,
+    "fraud_risk": 0.06,
+    "tank_capacity": {
+      "PMS": 41183,
+      "AGO": 23573,
+      "LPG": 14567,
+      "ATK": 8082
+    }
+  },
+  {
+    "station_id": "enugu_003",
+    "state": "Enugu",
+    "latitude": 6.404986,
+    "longitude": 7.529372,
+    "pump_count": 5,
+    "fraud_risk": 0.38,
+    "tank_capacity": {
+      "PMS": 44962,
+      "AGO": 12306,
+      "LPG": 10975,
+      "ATK": 13283
+    }
+  },
+  {
+    "station_id": "enugu_004",
+    "state": "Enugu",
+    "latitude": 6.450197,
+    "longitude": 7.470918,
+    "pump_count": 7,
+    "fraud_risk": 0.12,
+    "tank_capacity": {
+      "PMS": 47027,
+      "AGO": 17734,
+      "LPG": 11325,
+      "ATK": 19773
+    }
+  },
+  {
+    "station_id": "enugu_005",
+    "state": "Enugu",
+    "latitude": 6.366935,
+    "longitude": 7.385531,
+    "pump_count": 8,
+    "fraud_risk": 0.25,
+    "tank_capacity": {
+      "PMS": 46611,
+      "AGO": 18405,
+      "LPG": 7985,
+      "ATK": 19633
+    }
+  },
+  {
+    "station_id": "enugu_006",
+    "state": "Enugu",
+    "latitude": 6.491021,
+    "longitude": 7.573043,
+    "pump_count": 7,
+    "fraud_risk": 0.13,
+    "tank_capacity": {
+      "PMS": 32886,
+      "AGO": 24527,
+      "LPG": 12317,
+      "ATK": 19021
+    }
+  },
+  {
+    "station_id": "edo_001",
+    "state": "Edo",
+    "latitude": 6.514919,
+    "longitude": 6.002972,
+    "pump_count": 6,
+    "fraud_risk": 0.37,
+    "tank_capacity": {
+      "PMS": 47858,
+      "AGO": 21247,
+      "LPG": 7854,
+      "ATK": 14820
+    }
+  },
+  {
+    "station_id": "edo_002",
+    "state": "Edo",
+    "latitude": 6.701407,
+    "longitude": 5.92932,
+    "pump_count": 5,
+    "fraud_risk": 0.31,
+    "tank_capacity": {
+      "PMS": 30326,
+      "AGO": 10322,
+      "LPG": 10477,
+      "ATK": 17523
+    }
+  },
+  {
+    "station_id": "edo_003",
+    "state": "Edo",
+    "latitude": 6.604475,
+    "longitude": 6.032997,
+    "pump_count": 7,
+    "fraud_risk": 0.1,
+    "tank_capacity": {
+      "PMS": 48525,
+      "AGO": 17355,
+      "LPG": 14659,
+      "ATK": 9430
+    }
+  },
+  {
+    "station_id": "edo_004",
+    "state": "Edo",
+    "latitude": 6.673949,
+    "longitude": 6.007153,
+    "pump_count": 5,
+    "fraud_risk": 0.31,
+    "tank_capacity": {
+      "PMS": 38787,
+      "AGO": 16023,
+      "LPG": 11619,
+      "ATK": 18215
+    }
+  },
+  {
+    "station_id": "edo_005",
+    "state": "Edo",
+    "latitude": 6.517573,
+    "longitude": 5.904657,
+    "pump_count": 6,
+    "fraud_risk": 0.31,
+    "tank_capacity": {
+      "PMS": 46336,
+      "AGO": 20941,
+      "LPG": 5494,
+      "ATK": 16184
+    }
+  },
+  {
+    "station_id": "edo_006",
+    "state": "Edo",
+    "latitude": 6.602479,
+    "longitude": 5.871655,
+    "pump_count": 8,
+    "fraud_risk": 0.16,
+    "tank_capacity": {
+      "PMS": 36287,
+      "AGO": 22658,
+      "LPG": 8848,
+      "ATK": 15791
+    }
+  },
+  {
+    "station_id": "akwa_ibom_001",
+    "state": "Akwa Ibom",
+    "latitude": 5.006376,
+    "longitude": 7.956701,
+    "pump_count": 5,
+    "fraud_risk": 0.26,
+    "tank_capacity": {
+      "PMS": 43719,
+      "AGO": 23249,
+      "LPG": 11070,
+      "ATK": 18042
+    }
+  },
+  {
+    "station_id": "akwa_ibom_002",
+    "state": "Akwa Ibom",
+    "latitude": 5.088646,
+    "longitude": 7.96244,
+    "pump_count": 6,
+    "fraud_risk": 0.24,
+    "tank_capacity": {
+      "PMS": 45712,
+      "AGO": 14932,
+      "LPG": 11065,
+      "ATK": 8420
+    }
+  },
+  {
+    "station_id": "akwa_ibom_003",
+    "state": "Akwa Ibom",
+    "latitude": 4.970674,
+    "longitude": 7.954425,
+    "pump_count": 8,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 42775,
+      "AGO": 22767,
+      "LPG": 9302,
+      "ATK": 14925
+    }
+  },
+  {
+    "station_id": "akwa_ibom_004",
+    "state": "Akwa Ibom",
+    "latitude": 4.965072,
+    "longitude": 7.969674,
+    "pump_count": 6,
+    "fraud_risk": 0.16,
+    "tank_capacity": {
+      "PMS": 48779,
+      "AGO": 18792,
+      "LPG": 8088,
+      "ATK": 19775
+    }
+  },
+  {
+    "station_id": "akwa_ibom_005",
+    "state": "Akwa Ibom",
+    "latitude": 5.080318,
+    "longitude": 7.979743,
+    "pump_count": 6,
+    "fraud_risk": 0.21,
+    "tank_capacity": {
+      "PMS": 35768,
+      "AGO": 14796,
+      "LPG": 8775,
+      "ATK": 8234
+    }
+  },
+  {
+    "station_id": "plateau_001",
+    "state": "Plateau",
+    "latitude": 9.788668,
+    "longitude": 8.969368,
+    "pump_count": 7,
+    "fraud_risk": 0.06,
+    "tank_capacity": {
+      "PMS": 43236,
+      "AGO": 10391,
+      "LPG": 5858,
+      "ATK": 12710
+    }
+  },
+  {
+    "station_id": "plateau_002",
+    "state": "Plateau",
+    "latitude": 9.87917,
+    "longitude": 8.757512,
+    "pump_count": 8,
+    "fraud_risk": 0.29,
+    "tank_capacity": {
+      "PMS": 34455,
+      "AGO": 22878,
+      "LPG": 11203,
+      "ATK": 13642
+    }
+  },
+  {
+    "station_id": "plateau_003",
+    "state": "Plateau",
+    "latitude": 9.971354,
+    "longitude": 8.894653,
+    "pump_count": 5,
+    "fraud_risk": 0.27,
+    "tank_capacity": {
+      "PMS": 31774,
+      "AGO": 14885,
+      "LPG": 8493,
+      "ATK": 11098
+    }
+  },
+  {
+    "station_id": "plateau_004",
+    "state": "Plateau",
+    "latitude": 9.831771,
+    "longitude": 8.852706,
+    "pump_count": 5,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 32026,
+      "AGO": 22989,
+      "LPG": 9898,
+      "ATK": 17235
+    }
+  },
+  {
+    "station_id": "plateau_005",
+    "state": "Plateau",
+    "latitude": 9.783592,
+    "longitude": 8.896192,
+    "pump_count": 8,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 42593,
+      "AGO": 10776,
+      "LPG": 7788,
+      "ATK": 15147
+    }
+  },
+  {
+    "station_id": "benue_001",
+    "state": "Benue",
+    "latitude": 7.756231,
+    "longitude": 8.645124,
+    "pump_count": 7,
+    "fraud_risk": 0.27,
+    "tank_capacity": {
+      "PMS": 48858,
+      "AGO": 21702,
+      "LPG": 12407,
+      "ATK": 11853
+    }
+  },
+  {
+    "station_id": "benue_002",
+    "state": "Benue",
+    "latitude": 7.699625,
+    "longitude": 8.529071,
+    "pump_count": 5,
+    "fraud_risk": 0.08,
+    "tank_capacity": {
+      "PMS": 30520,
+      "AGO": 15871,
+      "LPG": 10662,
+      "ATK": 13994
+    }
+  },
+  {
+    "station_id": "benue_003",
+    "state": "Benue",
+    "latitude": 7.697189,
+    "longitude": 8.607168,
+    "pump_count": 5,
+    "fraud_risk": 0.31,
+    "tank_capacity": {
+      "PMS": 34644,
+      "AGO": 10662,
+      "LPG": 5234,
+      "ATK": 10262
+    }
+  },
+  {
+    "station_id": "benue_004",
+    "state": "Benue",
+    "latitude": 7.739515,
+    "longitude": 8.64644,
+    "pump_count": 6,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 49080,
+      "AGO": 20205,
+      "LPG": 9296,
+      "ATK": 9848
+    }
+  },
+  {
+    "station_id": "benue_005",
+    "state": "Benue",
+    "latitude": 7.807691,
+    "longitude": 8.58956,
+    "pump_count": 8,
+    "fraud_risk": 0.11,
+    "tank_capacity": {
+      "PMS": 41666,
+      "AGO": 14336,
+      "LPG": 7417,
+      "ATK": 10483
+    }
+  },
+  {
+    "station_id": "ondo_001",
+    "state": "Ondo",
+    "latitude": 7.207703,
+    "longitude": 5.319836,
+    "pump_count": 7,
+    "fraud_risk": 0.09,
+    "tank_capacity": {
+      "PMS": 47528,
+      "AGO": 14090,
+      "LPG": 12651,
+      "ATK": 10440
+    }
+  },
+  {
+    "station_id": "ondo_002",
+    "state": "Ondo",
+    "latitude": 7.146067,
+    "longitude": 5.256642,
+    "pump_count": 5,
+    "fraud_risk": 0.1,
+    "tank_capacity": {
+      "PMS": 32538,
+      "AGO": 21592,
+      "LPG": 6216,
+      "ATK": 8053
+    }
+  },
+  {
+    "station_id": "ondo_003",
+    "state": "Ondo",
+    "latitude": 7.182378,
+    "longitude": 5.26339,
+    "pump_count": 6,
+    "fraud_risk": 0.24,
+    "tank_capacity": {
+      "PMS": 36020,
+      "AGO": 13517,
+      "LPG": 7836,
+      "ATK": 16410
+    }
+  },
+  {
+    "station_id": "ondo_004",
+    "state": "Ondo",
+    "latitude": 7.20443,
+    "longitude": 5.249853,
+    "pump_count": 6,
+    "fraud_risk": 0.07,
+    "tank_capacity": {
+      "PMS": 42192,
+      "AGO": 12898,
+      "LPG": 14493,
+      "ATK": 19215
+    }
+  },
+  {
+    "station_id": "ondo_005",
+    "state": "Ondo",
+    "latitude": 7.313252,
+    "longitude": 5.268679,
+    "pump_count": 8,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 31654,
+      "AGO": 17468,
+      "LPG": 13547,
+      "ATK": 16244
+    }
+  },
+  {
+    "station_id": "abia_001",
+    "state": "Abia",
+    "latitude": 5.57061,
+    "longitude": 7.612953,
+    "pump_count": 6,
+    "fraud_risk": 0.33,
+    "tank_capacity": {
+      "PMS": 32991,
+      "AGO": 24634,
+      "LPG": 14841,
+      "ATK": 19637
+    }
+  },
+  {
+    "station_id": "abia_002",
+    "state": "Abia",
+    "latitude": 5.445698,
+    "longitude": 7.579408,
+    "pump_count": 8,
+    "fraud_risk": 0.34,
+    "tank_capacity": {
+      "PMS": 45201,
+      "AGO": 15532,
+      "LPG": 5020,
+      "ATK": 9712
+    }
+  },
+  {
+    "station_id": "abia_003",
+    "state": "Abia",
+    "latitude": 5.391886,
+    "longitude": 7.524889,
+    "pump_count": 7,
+    "fraud_risk": 0.26,
+    "tank_capacity": {
+      "PMS": 35734,
+      "AGO": 21474,
+      "LPG": 13831,
+      "ATK": 10179
+    }
+  },
+  {
+    "station_id": "abia_004",
+    "state": "Abia",
+    "latitude": 5.56129,
+    "longitude": 7.472461,
+    "pump_count": 5,
+    "fraud_risk": 0.28,
+    "tank_capacity": {
+      "PMS": 30973,
+      "AGO": 16714,
+      "LPG": 14768,
+      "ATK": 14257
+    }
+  },
+  {
+    "station_id": "abia_005",
+    "state": "Abia",
+    "latitude": 5.464374,
+    "longitude": 7.618608,
+    "pump_count": 7,
+    "fraud_risk": 0.23,
+    "tank_capacity": {
+      "PMS": 44842,
+      "AGO": 22543,
+      "LPG": 7176,
+      "ATK": 8679
+    }
+  },
+  {
+    "station_id": "cross_river_001",
+    "state": "Cross River",
+    "latitude": 4.944606,
+    "longitude": 8.233564,
+    "pump_count": 5,
+    "fraud_risk": 0.08,
+    "tank_capacity": {
+      "PMS": 34966,
+      "AGO": 17114,
+      "LPG": 11593,
+      "ATK": 17480
+    }
+  },
+  {
+    "station_id": "cross_river_002",
+    "state": "Cross River",
+    "latitude": 4.892776,
+    "longitude": 8.227814,
+    "pump_count": 6,
+    "fraud_risk": 0.31,
+    "tank_capacity": {
+      "PMS": 39822,
+      "AGO": 14103,
+      "LPG": 7146,
+      "ATK": 12040
+    }
+  },
+  {
+    "station_id": "cross_river_003",
+    "state": "Cross River",
+    "latitude": 4.963065,
+    "longitude": 8.23512,
+    "pump_count": 7,
+    "fraud_risk": 0.37,
+    "tank_capacity": {
+      "PMS": 48101,
+      "AGO": 12553,
+      "LPG": 11252,
+      "ATK": 19138
+    }
+  },
+  {
+    "station_id": "cross_river_004",
+    "state": "Cross River",
+    "latitude": 4.973322,
+    "longitude": 8.271184,
+    "pump_count": 8,
+    "fraud_risk": 0.21,
+    "tank_capacity": {
+      "PMS": 34184,
+      "AGO": 19018,
+      "LPG": 9086,
+      "ATK": 13478
+    }
+  },
+  {
+    "station_id": "kwara_001",
+    "state": "Kwara",
+    "latitude": 9.083673,
+    "longitude": 4.326057,
+    "pump_count": 5,
+    "fraud_risk": 0.11,
+    "tank_capacity": {
+      "PMS": 40114,
+      "AGO": 14740,
+      "LPG": 8694,
+      "ATK": 13592
+    }
+  },
+  {
+    "station_id": "kwara_002",
+    "state": "Kwara",
+    "latitude": 9.080511,
+    "longitude": 4.458524,
+    "pump_count": 8,
+    "fraud_risk": 0.39,
+    "tank_capacity": {
+      "PMS": 39080,
+      "AGO": 20858,
+      "LPG": 11733,
+      "ATK": 8927
+    }
+  },
+  {
+    "station_id": "kwara_003",
+    "state": "Kwara",
+    "latitude": 8.89306,
+    "longitude": 4.431971,
+    "pump_count": 8,
+    "fraud_risk": 0.35,
+    "tank_capacity": {
+      "PMS": 43089,
+      "AGO": 23850,
+      "LPG": 7104,
+      "ATK": 11060
+    }
+  },
+  {
+    "station_id": "borno_001",
+    "state": "Borno",
+    "latitude": 11.918303,
+    "longitude": 13.043112,
+    "pump_count": 6,
+    "fraud_risk": 0.22,
+    "tank_capacity": {
+      "PMS": 42484,
+      "AGO": 20011,
+      "LPG": 9307,
+      "ATK": 11424
+    }
+  },
+  {
+    "station_id": "borno_002",
+    "state": "Borno",
+    "latitude": 11.888641,
+    "longitude": 13.218852,
+    "pump_count": 7,
+    "fraud_risk": 0.16,
+    "tank_capacity": {
+      "PMS": 47130,
+      "AGO": 11395,
+      "LPG": 12904,
+      "ATK": 10796
+    }
+  },
+  {
+    "station_id": "borno_003",
+    "state": "Borno",
+    "latitude": 11.741994,
+    "longitude": 13.218743,
+    "pump_count": 8,
+    "fraud_risk": 0.13,
+    "tank_capacity": {
+      "PMS": 48171,
+      "AGO": 22939,
+      "LPG": 6510,
+      "ATK": 14213
+    }
+  }
+]

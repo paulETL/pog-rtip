@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: bronze
+
+    schema: pog_rtip_bronze
+
+    tables:
+      - name: dim_stations
+
+      - name: raw_pump_transactions
+
+      - name: raw_tank_readings
+
+      - name: raw_pump_health
+
+      - name: raw_fuel_deliveries
+
+      - name: raw_station_master
+
+      - name: raw_station_tank_capacity

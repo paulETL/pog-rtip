@@ -1,0 +1,463 @@
+services:
+
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:v24.1.2
+
+    container_name: redpanda
+
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp=1
+      - --memory=512M
+      - --reserve-memory=0M
+      - --node-id=0
+      - --check=false
+      - --kafka-addr=PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr=PLAINTEXT://redpanda:9092
+
+    ports:
+      - "9092:9092"
+      - "9644:9644"
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    command: server /data --console-address ":9001"
+    restart: always
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+
+    volumes:
+      - minio_data:/data
+
+    healthcheck:
+      test: [
+        "CMD",
+        "curl",
+        "-f",
+        "http://localhost:9000/minio/health/live"
+      ]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+
+    container_name: clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+
+    environment:
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8123/ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+
+
+  flink-jobmanager:
+    build:
+      context: ../
+      dockerfile: flink-jobs/Dockerfile
+
+    container_name: flink-jobmanager
+
+    command: jobmanager
+
+    ports:
+      - "8081:8081"
+
+    environment:
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD}
+      FLINK_PROPERTIES: |
+        jobmanager.rpc.address: flink-jobmanager
+        taskmanager.numberOfTaskSlots: 1
+        parallelism.default: 1
+        execution.checkpointing.interval: 10 s
+        s3.endpoint: http://minio:9000
+        s3.path.style.access: true
+        s3.access-key: ${MINIO_ROOT_USER}
+        s3.secret-key: ${MINIO_ROOT_PASSWORD}
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  flink-taskmanager:
+    build:
+      context: ../
+      dockerfile: flink-jobs/Dockerfile
+
+    container_name: flink-taskmanager
+
+    command: taskmanager
+
+    depends_on:
+      - flink-jobmanager
+
+    environment:
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD}
+      FLINK_PROPERTIES: |
+        jobmanager.rpc.address: flink-jobmanager
+        taskmanager.numberOfTaskSlots: 1
+        parallelism.default: 1
+        execution.checkpointing.interval: 10 s
+        s3.endpoint: http://minio:9000
+        s3.path.style.access: true
+        s3.access-key: ${MINIO_ROOT_USER}
+        s3.secret-key: ${MINIO_ROOT_PASSWORD}
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  grafana:
+    image: grafana/grafana:11.0.0
+
+    container_name: grafana
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD}
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  simulator:
+    build:
+      context: ../simulator
+
+    container_name: simulator
+
+    command: python main.py
+
+    env_file:
+      - ../.env
+
+    depends_on:
+      - redpanda
+
+    restart: always
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  transaction-consumer:
+
+
+
+  tank-consumer:
+    build:
+      context: ../simulator
+
+    container_name: tank-consumer
+
+    command: python tank_consumer.py
+
+    env_file:
+      - ../.env
+
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+      redpanda:
+        condition: service_started
+
+    restart: always
+
+    networks:
+      - pog-network
+
+
+  # fraud-detection:
+  #   build:
+  #     context: ../simulator
+  #     dockerfile: Dockerfile.flink
+
+  #   container_name: fraud-detection
+
+  #   command: python fraud_detection_job.py
+
+  #   env_file:
+  #     - ../infrastructure/.env
+
+  #   depends_on:
+  #     - redpanda
+
+  #   restart: always
+
+  #   networks:
+  #     - pog-network
+
+  fraud-consumer:
+
+    build:
+      context: ../simulator
+
+    container_name: fraud-consumer
+
+    command: python fraud_consumer.py
+
+    env_file:
+      - ../.env
+
+    depends_on:
+      redpanda:
+        condition: service_started
+      clickhouse:
+        condition: service_healthy
+
+    restart: always
+
+    networks:
+      - pog-network
+
+
+  pump-health-consumer:
+
+    build:
+      context: ../simulator
+
+    container_name: pump-health-consumer
+
+    command: python pump_health_consumer.py
+
+    env_file:
+      - ../.env
+
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+      redpanda:
+        condition: service_started
+
+    restart: always
+
+    networks:
+      - pog-network
+
+
+  delivery-consumer:
+
+    build:
+      context: ../simulator
+
+    container_name: delivery-consumer
+
+    command: python delivery_consumer.py
+
+    env_file:
+      - ../.env
+
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+      redpanda:
+        condition: service_started
+
+
+    restart: always
+
+    networks:
+      - pog-network
+
+  flink-python:
+    build:
+      context: ../
+      dockerfile: flink-jobs/Dockerfile
+
+    container_name: flink-python
+
+    env_file:
+      - ../.env
+
+    volumes:
+      - ../flink-jobs:/opt/flink/jobs
+
+    depends_on:
+      flink-jobmanager:
+        condition: service_started
+      flink-taskmanager:
+        condition: service_started
+      minio:
+        condition: service_healthy
+
+    environment:
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD}
+      JOB_MANAGER_RPC_ADDRESS: flink-jobmanager
+      FLINK_PROPERTIES: |
+        jobmanager.rpc.address: flink-jobmanager
+        rest.address: flink-jobmanager
+        execution.checkpointing.interval: 10 s
+        s3.endpoint: http://minio:9000
+        s3.path.style.access: true
+        s3.access-key: ${MINIO_ROOT_USER}
+        s3.secret-key: ${MINIO_ROOT_PASSWORD}
+
+    command: >
+      bash -c "
+      sleep 30 &&
+      echo 'Starting Flink Kafka to MinIO ingestion...' &&
+      flink run -py /opt/flink/jobs/kafka_to_minio.py
+      "
+
+    networks:
+      - pog-network
+
+  dagster:
+    build:
+      context: ../orchestration
+
+    container_name: dagster
+
+    env_file:
+      - ../.env
+
+    environment:
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_BUCKET: pog-rtip-raw
+      DATABRICKS_HOST: ${DATABRICKS_HOST}
+      DATABRICKS_TOKEN: ${DATABRICKS_TOKEN}
+      DATABRICKS_HTTP_PATH: ${DATABRICKS_HTTP_PATH}
+
+    volumes:
+      - ../orchestration:/opt/dagster/app
+
+    ports:
+      - "3001:3000"
+
+    depends_on:
+      minio:
+        condition: service_healthy
+
+    networks:
+      - pog-network
+
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  dbt:
+    build:
+      context: ../dbt
+    container_name: dbt
+    env_file:
+      - .env
+    volumes:
+      - ../dbt:/dbt
+    networks:
+      - pog-network
+    depends_on:
+      - minio
+
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+
+      
+
+
+  # spark-streaming:
+  #   build:
+  #     context: ..
+  #     dockerfile: streaming/Dockerfile
+
+  #   container_name: spark-streaming
+
+  #   depends_on:
+  #     - redpanda
+  #     - minio
+
+  #   env_file:
+  #     - ../.env
+
+  #   volumes:
+  #     - ../:/app
+
+  #   working_dir: /app
+
+  #   networks:
+  #     - pog-network
+
+
+volumes:
+  clickhouse_data:
+  minio_data:
+
+
+
+networks:
+  pog-network:
+    driver: bridge

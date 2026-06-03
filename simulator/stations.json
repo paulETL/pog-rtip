@@ -1,0 +1,37 @@
+[
+  {
+    "station_id": "lagos_001",
+    "state": "Lagos",
+    "city": "Lekki",
+    "pump_count": 8,
+    "daily_volume_target": 120000,
+    "fraud_risk": 0.35
+  },
+
+  {
+    "station_id": "imo_004",
+    "state": "Imo",
+    "city": "Owerri",
+    "pump_count": 6,
+    "daily_volume_target": 55000,
+    "fraud_risk": 0.18
+  },
+
+  {
+    "station_id": "abuja_002",
+    "state": "FCT",
+    "city": "Maitama",
+    "pump_count": 7,
+    "daily_volume_target": 95000,
+    "fraud_risk": 0.12
+  },
+
+  {
+    "station_id": "rivers_003",
+    "state": "Rivers",
+    "city": "Port Harcourt",
+    "pump_count": 7,
+    "daily_volume_target": 88000,
+    "fraud_risk": 0.28
+  }
+]

@@ -1,0 +1,18 @@
+name: "pog_rtip"
+version: "1.0"
+config-version: 2
+
+profile: "pog_rtip"
+
+model-paths: ["models"]
+
+models:
+  pog_rtip:
+    bronze:
+      +schema: pog_rtip_bronze
+
+    silver:
+      +schema: pog_rtip_silver
+
+    gold:
+      +schema: pog_rtip_gold

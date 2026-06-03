@@ -1,0 +1,58 @@
+# Environment variables
+.env
+**/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dagster temp directories
+.tmp_dagster_home_*
+history/
+storage/
+schedules/
+
+# Logs
+logs/
+*.log
+temp_logs.txt
+
+# dbt
+dbt/target/
+dbt/logs/
+
+dbt/profiles.yml
+dbt/.user.yml
+
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python virtual environments
+venv/
+.venv/
+
+# Local temp folders
+temp/
+
+# Databricks compiled artifacts
+target/
+
+# Cache
+.cache/
+.pytest_cache/
+
+*.db
+*.db-shm
+*.db-wal
+
+*.msgpack
+*.gpickle
+
+orchestration/.tmp_dagster_home_*/

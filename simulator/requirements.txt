@@ -1,0 +1,4 @@
+confluent-kafka
+faker
+clickhouse-connect
+python-dotenv

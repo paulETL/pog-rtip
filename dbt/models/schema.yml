@@ -1,0 +1,36 @@
+version: 2
+
+models:
+
+  - name: bronze_dim_stations
+    columns:
+      - name: station_id
+        tests:
+          - not_null
+          - unique
+
+  - name: bronze_pump_transactions
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+
+  - name: bronze_fuel_deliveries
+    columns:
+      - name: delivery_id
+        tests:
+          - not_null
+          - unique
+
+  - name: silver_sales
+    columns:
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: silver_inventory
+    columns:
+      - name: station_id
+        tests:
+          - not_null
