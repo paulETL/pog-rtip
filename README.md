@@ -3,7 +3,7 @@
 
 > Production-grade real-time data engineering platform simulating operational intelligence across 140 fuel stations in 20 Nigerian states.
 
-![Architecture](assets/architecture/architecture.png)
+![Architecture](assets/architecture/architecture.jpg)
 
 ---
 
