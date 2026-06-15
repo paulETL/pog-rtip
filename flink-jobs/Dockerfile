@@ -7,7 +7,9 @@ RUN apt-get update && \
     ln -s /usr/bin/python3 /usr/bin/python
 
 COPY flink-jobs/requirements.txt .
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir --default-timeout=300 -r requirements.txt
+
 
 COPY infrastructure/flink-lib/*.jar /opt/flink/lib/
 

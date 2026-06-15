@@ -24,6 +24,31 @@ fuel_prices = {
     "ATK": 1800
 }
 
+STATE_DEMAND_FACTOR = {
+    "Lagos": 2.0,
+    "FCT": 1.8,
+    "Rivers": 1.7,
+    "Kano": 0.8,
+    "Oyo": 1.1,
+    "Ogun": 1.2,
+    "Delta": 1.5,
+    "Anambra": 1.6,
+    "Imo": 1.2,
+    "Kaduna": 0.6,
+    "Enugu": 1.2,
+    "Edo": 1.3,
+    "Akwa Ibom": 1.5,
+    "Plateau": 0.5,
+    "Benue": 0.9,
+    "Ondo": 0.8,
+    "Abia": 1.2,
+    "Cross River": 1.1,
+    "Kwara": 0.9,
+    "Borno": 0.5
+}
+
+
+
 
 def demand_multiplier():
 
@@ -69,7 +94,42 @@ def initialize_inventory(stations):
 
 def generate_event(stations, inventory):
 
-    station = random.choice(stations)
+    weights = [
+        STATE_DEMAND_FACTOR[s["state"]]
+        for s in stations
+    ]
+
+    station = random.choices(
+        stations,
+        weights=[
+            {
+                "Lagos": 2.0,
+                "FCT": 1.8,
+                "Rivers": 1.7,
+                "Kano": 0.8,
+                "Oyo": 1.1,
+                "Ogun": 1.2,
+                "Delta": 1.5,
+                "Anambra": 1.6,
+                "Imo": 1.2,
+                "Kaduna": 0.6,
+                "Enugu": 1.2,
+                "Edo": 1.3,
+                "Akwa Ibom": 1.5,
+                "Plateau": 0.5,
+                "Benue": 0.9,
+                "Ondo": 0.8,
+                "Abia": 1.2,
+                "Cross River": 1.1,
+                "Kwara": 0.9,
+                "Borno": 0.5
+            }[s["state"]]
+            for s in stations
+        ],
+        k=1
+    )[0]
+
+
 
     station_id = station["station_id"]
 
@@ -82,16 +142,25 @@ def generate_event(stations, inventory):
 
     multiplier = demand_multiplier()
 
+    tier_multiplier = {
+        "mega": 3.0,
+        "urban": 2.0,
+        "standard": 1.0,
+        "rural": 0.5
+    }
+
     requested_liters = round(
-        random.uniform(5, 80) * multiplier,
+        random.uniform(5, 80)
+        * multiplier
+        * tier_multiplier[
+            station["station_tier"]
+        ],
         2
     )
+
     # FRAUD PROBABILITY
 
-    fraud_probability = station.get(
-        "fraud_probability",
-        0.15
-    )
+    fraud_probability = station["fraud_risk"]
 
 
     fraud_triggered = (
@@ -186,24 +255,54 @@ def run():
 
     while True:
 
-        generate_tank_readings(
-            stations,
-            inventory
-        )
-
-        generate_pump_health(stations)
+        for _ in range(random.randint(50,150)):
+            generate_event(
+                stations,
+                inventory
+            )
 
         generate_deliveries(
             stations,
             inventory
         )
 
-        event = generate_event(
+        generate_tank_readings(
             stations,
             inventory
         )
 
-        if event:
+        generate_pump_health(
+            stations
+        )
+
+        
+        # generate_tank_readings(
+        #     stations,
+        #     inventory
+        # )
+
+        # generate_pump_health(stations)
+
+        # generate_deliveries(
+        #     stations,
+        #     inventory
+        # )
+
+        # transactions_this_cycle = random.randint(50, 150)
+
+        # for _ in range(transactions_this_cycle):
+        #     generate_event(
+        #         stations,
+        #         inventory
+        #     )
+
+
+        # event = generate_event(
+        #     stations,
+        #     inventory
+        # )
+
+        # removed stray event check
             print(event)
 
         time.sleep(2)

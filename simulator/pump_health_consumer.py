@@ -70,14 +70,14 @@ while True:
     )
 
 
-    if 'timestamp' not in event:
+    if 'event_time' not in event:
         continue
 
 
     row = [[
 
         datetime.fromisoformat(
-            event['timestamp']
+            event['event_time']
         ),
 
         event['station_id'],

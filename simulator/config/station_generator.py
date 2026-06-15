@@ -42,10 +42,52 @@ for state, count in states_distribution.items():
             "pump_count":
                 random.randint(5, 8),
 
-            "fraud_risk":
-                round(random.uniform(0.05, 0.4), 2),
+            "station_age":
+                random.randint(1, 15),
+
+
+            "fraud_risk": {
+
+                "Rivers": round(random.uniform(0.06, 0.09), 2),
+                "Delta": round(random.uniform(0.06, 0.08), 2),
+                "Akwa Ibom": round(random.uniform(0.05, 0.08), 2),
+
+                "Lagos": round(random.uniform(0.02, 0.05), 2),
+                "FCT": round(random.uniform(0.01, 0.04), 2),
+
+                "Anambra": round(random.uniform(0.04, 0.07), 2),
+                "Imo": round(random.uniform(0.04, 0.07), 2),
+                "Enugu": round(random.uniform(0.03, 0.06), 2),
+
+                "Edo": round(random.uniform(0.03, 0.06), 2),
+                "Cross River": round(random.uniform(0.04, 0.07), 2),
+
+                "Ogun": round(random.uniform(0.02, 0.05), 2),
+                "Oyo": round(random.uniform(0.02, 0.05), 2),
+                "Ondo": round(random.uniform(0.02, 0.05), 2),
+
+                "Kano": round(random.uniform(0.01, 0.04), 2),
+                "Kaduna": round(random.uniform(0.01, 0.04), 2),
+                "Plateau": round(random.uniform(0.01, 0.04), 2),
+                "Benue": round(random.uniform(0.02, 0.05), 2),
+                "Kwara": round(random.uniform(0.01, 0.04), 2),
+                "Borno": round(random.uniform(0.01, 0.03), 2),
+
+                "Abia": round(random.uniform(0.03, 0.06), 2)
+
+            }[state],
+
+
+
+            "station_tier":
+                random.choices(
+                    ["mega", "urban", "standard", "rural"],
+                    weights=[10, 25, 45, 20],
+                    k=1
+                )[0],
 
             "tank_capacity": {
+
 
                 "PMS":
                     random.randint(30000, 50000),

@@ -1,6 +1,7 @@
 {{ config(
     materialized='table',
-    schema='pog_rtip_silver'
+    schema='pog_rtip_silver',
+    pre_hook="TRUNCATE TABLE {{ this }}"
 ) }}
 
 SELECT
@@ -14,6 +15,4 @@ SELECT
     ago_capacity,
     lpg_capacity,
     atk_capacity
-
 FROM {{ ref('bronze_dim_stations') }}
-

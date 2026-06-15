@@ -49,15 +49,40 @@ def generate_deliveries(
             # DELIVERY TRIGGER
 
 
-            if utilization < 0.35:
+            if utilization < 0.20:
+
+                demand_factor = {
+                    "Lagos": 4.0,
+                    "FCT": 3.2,
+                    "Rivers": 2.8,
+                    "Kano": 2.4,
+                    "Oyo": 2.2,
+                    "Ogun": 2.1,
+                    "Delta": 2.0,
+                    "Anambra": 1.9,
+                    "Imo": 1.8,
+                    "Kaduna": 1.8,
+                    "Enugu": 1.7,
+                    "Edo": 1.6,
+                    "Akwa Ibom": 1.5,
+                    "Plateau": 1.3,
+                    "Benue": 1.2,
+                    "Ondo": 1.2,
+                    "Abia": 1.2,
+                    "Cross River": 1.1,
+                    "Kwara": 0.9,
+                    "Borno": 0.7
+                }[station["state"]]
 
                 delivered_volume = round(
                     random.uniform(
                         5000,
                         20000
-                    ),
+                    ) * demand_factor,
                     2
                 )
+
+
 
 
                 inventory[
@@ -83,7 +108,7 @@ def generate_deliveries(
                     "delivery_id":
                         str(uuid.uuid4()),
 
-                    "timestamp":
+                    "event_time":
                         datetime.now().isoformat(),
 
                     "station_id":

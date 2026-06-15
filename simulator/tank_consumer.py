@@ -58,14 +58,14 @@ while True:
         msg.value().decode('utf-8')
     )
 
-    event['timestamp'] = (
+    event['event_time'] = (
         datetime.fromisoformat(
-            event['timestamp']
+            event['event_time']
         )
     )
 
     row = [[
-        event['timestamp'],
+        event['event_time'],
         event['station_id'],
         event['state'],
         event['fuel_type'],

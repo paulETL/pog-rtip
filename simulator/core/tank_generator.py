@@ -26,7 +26,7 @@ def generate_tank_readings(stations, inventory):
 
             event = {
 
-                "timestamp": datetime.now().isoformat(),
+                "event_time": datetime.now().isoformat(),
 
                 "station_id": station_id,
 

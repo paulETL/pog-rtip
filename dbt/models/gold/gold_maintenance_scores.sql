@@ -3,11 +3,32 @@
     schema='pog_rtip_gold'
 ) }}
 
+WITH latest_health AS (
+
+    SELECT *
+
+    FROM (
+
+        SELECT
+            *,
+            ROW_NUMBER() OVER (
+                PARTITION BY station_id, pump_id
+                ORDER BY health_time DESC
+            ) AS rn
+
+        FROM {{ ref('silver_pump_health') }}
+
+    )
+
+    WHERE rn = 1
+
+)
+
 SELECT
     station_id,
     state,
 
-    COUNT(*) AS pump_count,
+    COUNT(DISTINCT pump_id) AS pump_count,
 
     AVG(health_score) AS avg_health_score,
 
@@ -18,7 +39,7 @@ SELECT
         END
     ) AS failed_pumps
 
-FROM {{ ref('silver_pump_health') }}
+FROM latest_health
 
 GROUP BY
     station_id,

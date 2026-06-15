@@ -2,6 +2,9 @@
 .env
 **/.env
 
+.streamlit/secrets.toml
+**/secrets.toml
+
 # Python
 __pycache__/
 *.pyc
@@ -56,3 +59,4 @@ target/
 *.gpickle
 
 orchestration/.tmp_dagster_home_*/
+orchestration/.tmp_dagster_home_*

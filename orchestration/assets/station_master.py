@@ -1,7 +1,5 @@
 import json
-
 from dagster import asset
-
 from assets.databricks_loader import execute_insert
 
 
@@ -16,50 +14,36 @@ def station_master(context):
         "station_master/stations.json",
     )
 
-    stations = json.loads(
-        response.read().decode("utf-8")
-    )
-
+    stations = json.loads(response.read().decode("utf-8"))
     cursor = conn.cursor()
+
+    # Truncate before insert so no duplicates on every run
+    cursor.execute("TRUNCATE TABLE workspace.pog_rtip_bronze.raw_station_master")
+    cursor.execute("TRUNCATE TABLE workspace.pog_rtip_bronze.raw_station_tank_capacity")
+    conn.commit()
 
     station_rows = []
     capacity_rows = []
 
     for row in stations:
-
-        station_rows.append(
-            {
-                "station_id": row["station_id"],
-                "state": row["state"],
-                "latitude": row["latitude"],
-                "longitude": row["longitude"],
-                "pump_count": row["pump_count"],
-                "fraud_risk": row["fraud_risk"],
-            }
-        )
+        station_rows.append({
+            "station_id": row["station_id"],
+            "state": row["state"],
+            "latitude": row["latitude"],
+            "longitude": row["longitude"],
+            "pump_count": row["pump_count"],
+            "fraud_risk": row["fraud_risk"],
+        })
 
         for fuel_type, capacity in row["tank_capacity"].items():
+            capacity_rows.append({
+                "station_id": row["station_id"],
+                "fuel_type": fuel_type,
+                "tank_capacity": capacity,
+            })
 
-            capacity_rows.append(
-                {
-                    "station_id": row["station_id"],
-                    "fuel_type": fuel_type,
-                    "tank_capacity": capacity,
-                }
-            )
-
-    execute_insert(
-        cursor,
-        "workspace.pog_rtip_bronze.raw_station_master",
-        station_rows,
-    )
-
-    execute_insert(
-        cursor,
-        "workspace.pog_rtip_bronze.raw_station_tank_capacity",
-        capacity_rows,
-    )
-
+    execute_insert(cursor, "workspace.pog_rtip_bronze.raw_station_master", station_rows)
+    execute_insert(cursor, "workspace.pog_rtip_bronze.raw_station_tank_capacity", capacity_rows)
     conn.commit()
 
     context.log.info(

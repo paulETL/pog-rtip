@@ -24,11 +24,6 @@ services:
     networks:
       - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 512M
-
   minio:
     image: minio/minio:latest
     container_name: minio
@@ -58,26 +53,27 @@ services:
     networks:
       - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 512M
 
+
+# ============================================================
+  # ClickHouse — persistent data + auto-init schema
+  # ============================================================
   clickhouse:
     image: clickhouse/clickhouse-server:24.3
-
     container_name: clickhouse
+
     ports:
-      - "8123:8123"
-      - "9000:9000"
+      - "8123:8123"   # HTTP  (curl / tabix)
+      - "9000:9000"   # Native TCP (clickhouse-client)
 
     environment:
-      CLICKHOUSE_DB: ${CLICKHOUSE_DB}
-      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      CLICKHOUSE_DB:       ${CLICKHOUSE_DB}
+      CLICKHOUSE_USER:     ${CLICKHOUSE_USER}
       CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
 
     volumes:
-      - clickhouse_data:/var/lib/clickhouse
+      - clickhouse_data:/var/lib/clickhouse          # ← persistent data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro  # ← runs once
 
     ulimits:
       nofile:
@@ -93,10 +89,32 @@ services:
     networks:
       - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 1G
+
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: cloudbeaver
+    ports:
+      - "8978:8978"
+    volumes:
+      - cloudbeaver_data:/opt/cloudbeaver/workspace
+    networks:
+      - pog-network    
+
+
+  # tabix:
+  #   image: spoonest/clickhouse-tabix-web-client:stable
+  #   container_name: tabix
+  #   ports:
+  #     - "8124:80"
+  #   depends_on:
+  #     clickhouse:
+  #       condition: service_healthy
+  #   networks:
+  #     - pog-network
+
+
+# volumes:
+#   clickhouse_data:   
 
 
 
@@ -128,10 +146,8 @@ services:
     networks:
       - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 512M
+
+
 
   flink-taskmanager:
     build:
@@ -161,30 +177,78 @@ services:
     networks:
       - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 512M
 
-  grafana:
-    image: grafana/grafana:11.0.0
 
-    container_name: grafana
 
-    ports:
-      - "3000:3000"
+  # grafana:
+  #   image: grafana/grafana-enterprise:11.0.0
 
-    environment:
-      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER}
-      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD}
+  #   container_name: grafana
 
-    networks:
-      - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 256M
+  #   ports:
+  #     - "3000:3000"
+
+  #   environment:
+  #     GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER}
+  #     GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD}
+  #     GF_INSTALL_PLUGINS: "grafana-databricks-datasource"
+
+  #   networks:
+  #     - pog-network
+
+  # superset-db:
+  #   image: postgres:15
+  #   container_name: superset-db
+  #   environment:
+  #     POSTGRES_USER: ${POSTGRES_USER}
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  #     POSTGRES_DB: ${POSTGRES_DB}
+  #   networks:
+  #     - pog-network
+
+  # superset:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.superset
+
+  #   container_name: superset
+
+  #   ports:
+  #     - "8088:8088"
+
+  #   environment:
+  #     SUPERSET_CONFIG_PATH: /app/pythonpath/superset_config.py
+  #     GUNICORN_FORWARDED_ALLOW_IPS: "*"
+  #     FORWARDED_ALLOW_IPS: "*"
+
+  #   volumes:
+  #     - ./superset_config.py:/app/pythonpath/superset_config.py
+
+  #   command:
+  #     - /bin/bash
+  #     - -c
+  #     - |
+  #         superset db upgrade &&
+  #         superset fab create-admin \
+  #           --username admin \
+  #           --firstname Paul \
+  #           --lastname ETL \
+  #           --email admin@pogrtip.com \
+  #           --password admin123 || true &&
+  #         superset init &&
+  #         /usr/bin/run-server.sh
+
+  #   depends_on:
+  #     - superset-db
+
+  #   networks:
+  #     - pog-network
+
+
+
+
+
 
   simulator:
     build:
@@ -205,12 +269,29 @@ services:
     networks:
       - pog-network
 
-    deploy:
-      resources:
-        limits:
-          memory: 512M
+
 
   transaction-consumer:
+    build:
+      context: ../simulator
+
+    container_name: transaction-consumer
+
+    command: python consumer.py
+
+    env_file:
+      - ../.env
+
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+      redpanda:
+        condition: service_started
+
+    restart: always
+
+    networks:
+      - pog-network
 
 
 
@@ -373,39 +454,33 @@ services:
     networks:
       - pog-network
 
+
   dagster:
     build:
-      context: ../orchestration
-
+      context: ..
+      dockerfile: ./orchestration/Dockerfile
     container_name: dagster
-
     env_file:
-      - ../.env
-
+    - ../.env
     environment:
       MINIO_ENDPOINT: http://minio:9000
       MINIO_BUCKET: pog-rtip-raw
       DATABRICKS_HOST: ${DATABRICKS_HOST}
       DATABRICKS_TOKEN: ${DATABRICKS_TOKEN}
       DATABRICKS_HTTP_PATH: ${DATABRICKS_HTTP_PATH}
-
+      DAGSTER_HOME: /opt/dagster/dagster_home   
     volumes:
       - ../orchestration:/opt/dagster/app
-
+      - ../dbt:/opt/dagster/app/dbt
+      - ../dbt/profiles.yml:/opt/dagster/app/profiles.yml
+      - dagster_home:/opt/dagster/dagster_home  
     ports:
       - "3001:3000"
-
     depends_on:
       minio:
         condition: service_healthy
-
     networks:
       - pog-network
-
-    deploy:
-      resources:
-        limits:
-          memory: 1G
 
   dbt:
     build:
@@ -420,10 +495,11 @@ services:
     depends_on:
       - minio
 
-    deploy:
-      resources:
-        limits:
-          memory: 512M
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 512M
+
 
 
       
@@ -455,6 +531,8 @@ services:
 volumes:
   clickhouse_data:
   minio_data:
+  dagster_home:
+  cloudbeaver_data:
 
 
 

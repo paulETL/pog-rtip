@@ -71,14 +71,14 @@ while True:
     print(event)
 
 
-    if 'timestamp' not in event:
+    if 'event_time' not in event:
         continue
 
 
     row = [[
 
         datetime.fromisoformat(
-            event['timestamp']
+            event['event_time']
         ),
 
         event['delivery_id'],

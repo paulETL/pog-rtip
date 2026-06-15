@@ -51,7 +51,7 @@ def generate_pump_health(
 
             event = {
 
-                "timestamp": (
+                "event_time": (
                     datetime.now().isoformat()
                 ),
 

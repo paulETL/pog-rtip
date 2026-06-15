@@ -1,0 +1,7 @@
+streamlit>=1.35.0
+pandas>=2.0.0
+databricks-sql-connector>=3.3.0
+plotly>=5.20.0
+python-dotenv>=1.0.0
+streamlit-option-menu>=0.3.13
+numpy>=1.26.0

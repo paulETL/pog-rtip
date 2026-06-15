@@ -25,17 +25,19 @@ SELECT
     expected_amount,
     actual_amount_paid,
 
-    ABS(expected_amount - actual_amount_paid)
+    ABS(requested_liters - actual_dispensed_liters)
+        * unit_price
         AS estimated_loss,
 
     requested_liters - actual_dispensed_liters
         AS under_dispensed_liters,
 
     CASE
-        WHEN ABS(variance_liters) >= 10 THEN 'HIGH'
-        WHEN ABS(variance_liters) >= 5 THEN 'MEDIUM'
+        WHEN ABS(variance_liters) >= 0.25 THEN 'HIGH'
+        WHEN ABS(variance_liters) >= 0.15 THEN 'MEDIUM'
         ELSE 'LOW'
     END AS fraud_severity
+
 
 FROM {{ ref('bronze_pump_transactions') }}
 
